@@ -8,10 +8,7 @@
 body {
     position: relative; 
     font-family: 'Quicksand', sans-serif;
-    background-color: #F4F4F4; 
-    margin-left: 0; 
-    margin-right: 0; 
-     
+    background-color: #F4F4F4;    
 }
 
 h1{
@@ -25,9 +22,9 @@ h1{
 }
 
 header{ 
-    padding: 15px 70px; 
-    margin-left: 0; 
-    margin-right: 0; 
+    padding: 30px 0;
+    width: 1200px;  
+    margin: 0 auto;
 }
 
 /* ===================================== 
@@ -37,10 +34,9 @@ header{
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto; 
-        gap: 30px; 
-        max-width: 60%;
-        align-self: center;
-        justify-self: center;
+        width: 1200px; 
+        margin: 0 auto;  
+        gap: 30px;
     }
 
 

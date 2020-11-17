@@ -36,8 +36,6 @@
     padding: 28px 5px;   
     align-items: center;
     justify-content: space-around; 
-    margin-left: auto; 
-    margin-right: auto; 
     width: 375px;  
 }
 
@@ -57,7 +55,7 @@
 }
 
 .modal{
-    width: 300px; 
+    width: 375px; 
     margin: 15% auto auto; 
     position: relative; 
     text-align: center;
@@ -65,7 +63,6 @@
     border: none;  
     border-radius: 5px; 
     padding: 30px 20px; 
-    
     img{
         width: 150px; 
         height: 150px; 
