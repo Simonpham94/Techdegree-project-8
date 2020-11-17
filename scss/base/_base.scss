@@ -3,17 +3,15 @@
 ======================================== */
 *{
     box-sizing: border-box;
-    
 }
 
 body {
     position: relative; 
     font-family: 'Quicksand', sans-serif;
     background-color: #F4F4F4; 
-    // width: 85%;
-    margin-left: auto; 
-    margin-right: auto; 
-    max-width: 1200px;
+    margin-left: 0; 
+    margin-right: 0; 
+     
 }
 
 h1{
@@ -23,53 +21,26 @@ h1{
     font-size: 1.1em;  
     font-weight: 600; 
     text-transform: uppercase;
+   
 }
 
+header{ 
+    padding: 15px 70px; 
+    margin-left: 0; 
+    margin-right: 0; 
+}
 
 /* ===================================== 
     Grid layout
 ======================================== */
     .grid-container{
         display: grid; 
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr; 
-        grid-gap: 15px; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto; 
+        gap: 30px; 
+        max-width: 60%;
+        align-self: center;
+        justify-self: center;
     }
-/* ===================================== 
-    Overlay elements
-======================================== */
 
-.overlay{
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    background: rgba(100, 100, 100, 0.4); 
-    
-    
-}
-
-.modal{
-    width: 375px; 
-    margin: 15% auto auto; 
-    position: relative; 
-    text-align: center;
-    background: #fff; 
-    border: none;  
-    border-radius: 5px; 
-    padding: 30px 20px; 
-    width: 90%; 
-}
-
-.modal-close{
-    position: absolute; 
-    right: 15px; 
-    top: 5px; 
-    cursor: pointer;
-}
-
-// .hidden{
-//     display: none; 
-// }
 

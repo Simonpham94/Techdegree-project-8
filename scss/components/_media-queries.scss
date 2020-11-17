@@ -1,33 +1,48 @@
-/* ===================================== 
-    Tablet layout
-======================================== */
+// /* ===================================== 
+//     Tablet layout
+// ======================================== */
 
-@media only screen and (min-width: 768px) {
-    .grid-container{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr; 
-        grid-gap: 25px; 
-    }  
-}
+// @media only screen and (min-width: 768px) {
+//     .grid-container{
+//         grid-template-columns: 1fr 1fr;
+//         grid-template-rows: auto; 
+//         gap: 30px; 
+//     }  
 
-/* ===================================== 
-   Desktop layout
-======================================== */
+//     .card:nth-child(odd) {
+//         margin-right: 0; 
+//     }
 
-@media only screen and (min-width: 1024px) {
-    .grid-container{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
-    }  
+//     .card:nth-child(even) { 
+//         margin-left: 0; 
+//     }
 
-    .text-container{
-        h2{
-            font-size: 1.1em !important;  
+
+// }
+
+// /* ===================================== 
+//    Desktop layout
+// ======================================== */
+
+// @media only screen and (min-width: 1024px) {
+//     .grid-container{
+//         grid-template-columns: 1fr 1fr 1fr;
+//         grid-template-rows: auto; 
+//     }  
+
+//     .card {
+//         margin-left: 0; 
+//         margin-right: 0; 
+//     }
+
+//     .text-container{
+//         h2{
+//             font-size: 1.1em !important;  
                
-        }
+//         }
 
-        p{
-            font-size: .9em !important;
-        }
-    }
-}
+//         p{
+//             font-size: .9em !important;
+//         }
+//     }
+// }
