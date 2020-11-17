@@ -20,12 +20,6 @@ h1 {
   text-transform: uppercase;
 }
 
-header {
-  padding: 30px 0;
-  width: 1200px;
-  margin: 0 auto;
-}
-
 /* ===================================== 
     Grid layout
 ======================================== */
@@ -117,6 +111,126 @@ header {
 
 .hidden {
   display: none;
+}
+
+/* ===================================== 
+    Header +  search box
+======================================== */
+header {
+  padding: 30px 0;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid grey;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+.search-box input {
+  height: 30px;
+  width: 250px;
+  border: none;
+  background: #F4F4F4;
+  outline: none;
+}
+.search-box svg {
+  width: 25px;
+  cursor: pointer;
+}
+
+/* ===================================== 
+    Dark mode button
+======================================== */
+/* =======Base style===== */
+.toggle-wrapper > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* =======Toggle switch===== */
+.onoffswitch {
+  position: relative;
+  width: 73px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 23px;
+  padding: 0;
+  line-height: 23px;
+  font-size: 12px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 17px;
+  margin: 4px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 46px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */
