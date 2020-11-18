@@ -33,6 +33,32 @@ h1 {
 }
 
 /* ===================================== 
+    Dark mode
+======================================== */
+.darkMode {
+  color: #fff;
+}
+
+.darkModeGlass {
+  fill: #fff !important;
+}
+
+.darkModeBackground {
+  background-color: #444;
+}
+
+.darkModeCard {
+  background-color: #878683 !important;
+}
+
+.darkModeInput {
+  background-color: #444 !important;
+}
+.darkModeInput::placeholder {
+  color: #fff;
+}
+
+/* ===================================== 
     Card
 ======================================== */
 .avatar {
@@ -61,11 +87,14 @@ h1 {
   display: flex;
   border: 2px solid #bbb6b6;
   border-radius: 8px;
-  background-color: #fff;
   padding: 28px 5px;
   align-items: center;
   justify-content: space-around;
   width: 375px;
+}
+
+.backgroundWhite {
+  background-color: #fff;
 }
 
 /* ===================================== 
@@ -140,6 +169,7 @@ header {
 }
 .search-box svg {
   width: 25px;
+  fill: #2d3e50;
   cursor: pointer;
 }
 

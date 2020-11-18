@@ -32,7 +32,7 @@ function displayEmployees(employeeData) {
         let picture = employee.picture;
 
         employeeHTML += `
-        <div class="card" data-index="${index}">
+        <div class="card backgroundWhite" data-index="${index}">
             <img class="avatar" src="${picture.large}" />
             <div class="text-container">
                 <h2 class="name">${name.first} ${name.last}</h2>
@@ -79,3 +79,36 @@ gridContainer.addEventListener('click', e=> {
 modalClose.addEventListener('click', ()=> {
     overlay.classList.add('hidden'); 
 });
+
+
+// dark mode
+
+const darkModeSwitch = document.querySelector('#myonoffswitch'); 
+const cards = document.querySelectorAll('.card'); 
+const input = document.querySelector('#search'); 
+const glass = document.querySelector('#glass'); 
+const body = document.querySelector('body'); 
+const h1 = document.querySelector('h1');
+const modal = document.querySelector('.modal');
+
+darkModeSwitch.addEventListener('change', (e)=> {
+     if(e.target.checked) {
+        body.classList.add('darkModeBackground');
+        h1.classList.add('darkMode');
+        input.classList.add('darkModeInput');
+        glass.classList.add('darkModeGlass');
+        modal.classList.add('darkModeCard');
+        cards.forEach((card, index) => {
+            card.classList.remove('backgroundWhite');
+            card.classList.add('darkModeCard');
+        });
+     } else {
+        body.classList.remove('darkModeBackground');
+        h1.classList.remove('darkMode');
+        input.classList.remove('darkModeInput');
+        glass.classList.remove('darkModeGlass');
+     }
+})
+
+
+

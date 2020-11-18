@@ -8,17 +8,18 @@
 body {
     position: relative; 
     font-family: 'Quicksand', sans-serif;
-    background-color: #F4F4F4;    
+    background-color: #F4F4F4; 
+    // background-color: #444; 
 }
 
 h1{
     padding-top: 10px;
     margin-top: 0; 
     color: #4C4C4C;
+    // color: #fff; 
     font-size: 1.1em;  
     font-weight: 600; 
     text-transform: uppercase;
-   
 }
 
 
@@ -34,4 +35,29 @@ h1{
         gap: 30px;
     }
 
+/* ===================================== 
+    Dark mode
+======================================== */
 
+.darkMode {
+    color: #fff;
+}
+
+.darkModeGlass {
+    fill: #fff !important;
+}
+
+.darkModeBackground {
+    background-color: #444;
+}
+
+.darkModeCard{
+    background-color: #878683 !important;
+}
+
+.darkModeInput{
+    background-color: #444 !important;
+    &::placeholder{
+        color: #fff;
+    }
+}

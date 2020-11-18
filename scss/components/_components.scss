@@ -1,5 +1,4 @@
 
-
 /* ===================================== 
     Card
 ======================================== */
@@ -32,11 +31,15 @@
     display: flex; 
     border: 2px solid #bbb6b6; 
     border-radius: 8px; 
-    background-color: #fff; 
+    // background-color: #878683;
     padding: 28px 5px;   
     align-items: center;
     justify-content: space-around; 
     width: 375px;  
+}
+
+.backgroundWhite{
+    background-color: #fff;
 }
 
 /* ===================================== 
@@ -110,14 +113,22 @@ header{
         width: 250px; 
         border: none; 
         background: #F4F4F4;
+        // background: #444; 
         outline: none;
+        // &::placeholder{
+        //     // color: #fff; 
+        // }
     }
     svg{
-        width: 25px;
+        width: 25px; 
+        fill:#2d3e50;
         cursor: pointer; 
     }
 
 }
+// #glass{
+//     fill: #fff;
+// }
 
 /* ===================================== 
     Dark mode button
@@ -129,7 +140,6 @@ header{
         display: inline-block;
         vertical-align: middle;   
     } 
-    
 }
 
 /* =======Toggle switch===== */
@@ -181,24 +191,3 @@ header{
     right: 0px; 
 }
 
-// /* =======Scrollbar===== */
-
-// /* width */
-// ::-webkit-scrollbar {
-//     width: 10px;
-//   }
-  
-//   /* Track */
-//   ::-webkit-scrollbar-track {
-//     background: #f1f1f1; 
-//   }
-   
-//   /* Handle */
-//   ::-webkit-scrollbar-thumb {
-//     background: #4D4C72; 
-//   }
-  
-//   /* Handle on hover */
-//   ::-webkit-scrollbar-thumb:hover {
-//     background:#7377BF; 
-//   }
