@@ -98,9 +98,8 @@ darkModeSwitch.addEventListener('change', (e)=> {
         input.classList.add('darkModeInput');
         glass.classList.add('darkModeGlass');
         modal.classList.add('darkModeCard');
-        cards.forEach((card, index) => {
-            card.classList.remove('backgroundWhite');
-            card.classList.add('darkModeCard');
+        cards.forEach(card => {
+            card.style.setAttribute('style', 'background-color: #878683 !important');
         });
      } else {
         body.classList.remove('darkModeBackground');

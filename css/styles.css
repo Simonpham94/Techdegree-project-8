@@ -47,10 +47,6 @@ h1 {
   background-color: #444;
 }
 
-.darkModeCard {
-  background-color: #878683 !important;
-}
-
 .darkModeInput {
   background-color: #444 !important;
 }
@@ -101,7 +97,7 @@ h1 {
     Overlay elements
 ======================================== */
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
