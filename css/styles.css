@@ -149,11 +149,11 @@ h1 {
 }
 
 #back {
-  margin-right: 85px;
+  margin-right: 80px;
 }
 
 #forward {
-  margin-left: 85px;
+  margin-left: 80px;
 }
 
 /* ===================================== 
@@ -288,6 +288,9 @@ header {
   background-color: #444;
 }
 .dark-mode input::placeholder {
+  color: #fff;
+}
+.dark-mode input:focus {
   color: #fff;
 }
 .dark-mode h1 {

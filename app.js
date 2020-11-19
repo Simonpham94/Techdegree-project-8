@@ -44,6 +44,25 @@ function displayEmployees(employeeData) {
     })
     gridContainer.innerHTML = employeeHTML;
    
+  // Filter names
+  const search = document.getElementById('search'); 
+  const names = document.querySelectorAll('.text-container h2'); 
+ 
+  function handleSearch() {
+      const searchName = search.value.toLowerCase(); 
+      names.forEach(name => {
+          const cardName = name.textContent.toLowerCase(); 
+          const card = name.parentElement.parentElement; 
+          if(cardName.indexOf(searchName) > -1) {
+              card.style.display = 'flex'; 
+          } else {
+              card.style.display = 'none'; 
+          }
+      });
+  };
+
+  search.addEventListener('keyup', handleSearch);
+
 }
 
 function displayModal(index) {
@@ -66,50 +85,37 @@ function displayModal(index) {
 
     overlay.classList.remove('hidden'); 
     modalContainer.innerHTML = modalHTML; 
+
+    // Moving among between employee detail windows
+    const back = document.getElementById('back'); 
+    const forward = document.getElementById('forward'); 
+
+    back.addEventListener('click', (e) =>{
+        overlay.classList.add('hidden'); 
+        displayModal(index-1);
+    }); 
+
+    forward.addEventListener('click', (e) =>{
+        overlay.classList.add('hidden'); 
+        displayModal(index+1);
+    });
 };
 
-gridContainer.addEventListener('click', e=> {
-    if(e.target !== gridContainer) {
-        const card = e.target.closest('.card'); 
-        const index = card.getAttribute('data-index'); 
-        displayModal(index); 
-    }
-});
+    gridContainer.addEventListener('click', e=> {
+        if(e.target !== gridContainer) {
+            const card = e.target.closest('.card'); 
+            const index = card.getAttribute('data-index'); 
+            displayModal(index); 
+        }
 
-modalClose.addEventListener('click', ()=> {
-    overlay.classList.add('hidden'); 
-});
+        
+    });
 
-// Moving among between employee detail windows
-const back = document.getElementById('#back'); 
-const forward = document.getElementById('#forward'); 
+    modalClose.addEventListener('click', ()=> {
+        overlay.classList.add('hidden'); 
+    });
 
-// back.addEventListener('click', (e) =>{
-//     displayModal(index-1); 
-// }); 
-
-// forward.addEventListener('click', (e) =>{
-//     displayModal(index+1);
-// });
-
-// Filter names
-    const search = document.getElementById('search'); 
-    const names = document.querySelectorAll('.text-container h2'); 
-
-    function handleSearch() {
-        const searchName = search.value.toLowerCase(); 
-        names.forEach(name => {
-            const cardName = name.textContent.toLowerCase(); 
-            const card = name.parentElement; 
-            if(cardName.indexOf(searchName) > -1) {
-                card.style.display = 'block'; 
-            } else {
-                card.style.display = 'none'; 
-            }
-        });
-    };
-
-    search.addEventListener('keyup', handleSearch);
+    
 
 
 // Dark mode

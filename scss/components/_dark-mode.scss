@@ -9,6 +9,9 @@
         &::placeholder{
             color: #fff;
         }
+        &:focus{
+            color: #fff; 
+        }
     }
     h1{
         color: #fff; 
