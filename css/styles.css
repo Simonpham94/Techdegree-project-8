@@ -144,6 +144,7 @@ h1 {
 
 #back,
 #forward {
+  width: 20px;
   font-size: 2.3em;
   cursor: pointer;
 }
