@@ -96,8 +96,8 @@ const forward = document.getElementById('#forward');
     const search = document.getElementById('search'); 
     const names = document.querySelectorAll('.text-container h2'); 
 
-    const handleSearch = event => {
-        const searchName = event.target.value.toLowerCase(); 
+    function handleSearch() {
+        const searchName = search.value.toLowerCase(); 
         names.forEach(name => {
             const cardName = name.textContent.toLowerCase(); 
             const card = name.parentElement; 
