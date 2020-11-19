@@ -47,6 +47,10 @@ h1 {
   background-color: #444;
 }
 
+.darkModeCard {
+  background-color: #878683 !important;
+}
+
 .darkModeInput {
   background-color: #444 !important;
 }
@@ -136,6 +140,20 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+#back,
+#forward {
+  font-size: 2.3em;
+  cursor: pointer;
+}
+
+#back {
+  margin-right: 85px;
+}
+
+#forward {
+  margin-left: 85px;
 }
 
 /* ===================================== 
@@ -257,6 +275,33 @@ header {
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
+}
+
+.dark-mode {
+  background-color: #444;
+  color: #fff;
+}
+.dark-mode svg {
+  fill: #fff;
+}
+.dark-mode input {
+  background-color: #444;
+}
+.dark-mode input::placeholder {
+  color: #fff;
+}
+.dark-mode h1 {
+  color: #fff;
+}
+
+.card-dark-mode {
+  background-color: #878683;
+}
+.card-dark-mode span {
+  color: #fff;
+}
+.card-dark-mode button {
+  background-color: #878683;
 }
 
 /*# sourceMappingURL=styles.css.map */

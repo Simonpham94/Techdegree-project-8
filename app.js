@@ -53,7 +53,7 @@ function displayModal(index) {
     const modalHTML = `
         <img class="avatar" src="${picture.large}" />
         <div class="text-container">
-            <h2 class="name">${name.first} ${name.last}</h2>
+            <h2 class="name"><span id ="back">&lt;</span>${name.first} ${name.last}<span id = "forward">&gt;</span></h2> 
             <p class="email">${email}</p>
             <p class="address">${city}</p>
             <hr />
@@ -80,34 +80,71 @@ modalClose.addEventListener('click', ()=> {
     overlay.classList.add('hidden'); 
 });
 
+// Moving among between employee detail windows
+const back = document.getElementById('#back'); 
+const forward = document.getElementById('#forward'); 
 
-// dark mode
+// back.addEventListener('click', (e) =>{
+//     displayModal(index-1); 
+// }); 
 
-const darkModeSwitch = document.querySelector('#myonoffswitch'); 
-const cards = document.querySelectorAll('.card'); 
-const input = document.querySelector('#search'); 
-const glass = document.querySelector('#glass'); 
+// forward.addEventListener('click', (e) =>{
+//     displayModal(index+1);
+// });
+
+// Filter names
+    const search = document.getElementById('search'); 
+    const names = document.querySelectorAll('.text-container h2'); 
+
+    const handleSearch = event => {
+        const searchName = event.target.value.toLowerCase(); 
+        names.forEach(name => {
+            const cardName = name.textContent.toLowerCase(); 
+            const card = name.parentElement; 
+            if(cardName.indexOf(searchName) > -1) {
+                card.style.display = 'block'; 
+            } else {
+                card.style.display = 'none'; 
+            }
+        });
+    };
+
+    search.addEventListener('keyup', handleSearch);
+
+
+// Dark mode
+
+const darkModeSwitch = document.querySelector('#myonoffswitch');  
 const body = document.querySelector('body'); 
-const h1 = document.querySelector('h1');
-const modal = document.querySelector('.modal');
+const modals = document.querySelectorAll('.modal');
+
 
 darkModeSwitch.addEventListener('change', (e)=> {
-     if(e.target.checked) {
-        body.classList.add('darkModeBackground');
-        h1.classList.add('darkMode');
-        input.classList.add('darkModeInput');
-        glass.classList.add('darkModeGlass');
-        modal.classList.add('darkModeCard');
+    const cards = document.querySelectorAll('.card');
+    if(e.target.checked) {
+        body.classList.add('dark-mode');
         cards.forEach(card => {
-            card.style.setAttribute('style', 'background-color: #878683 !important');
+            card.classList.add('card-dark-mode'); 
         });
-     } else {
-        body.classList.remove('darkModeBackground');
-        h1.classList.remove('darkMode');
-        input.classList.remove('darkModeInput');
-        glass.classList.remove('darkModeGlass');
-     }
+        modals.forEach(modal => {
+            modal.classList.add('card-dark-mode');
+        })
+        
+    } else {
+        body.classList.remove('dark-mode');
+        cards.forEach(card => {
+            card.classList.remove('card-dark-mode'); 
+        });
+        modals.forEach(modal => {
+            modal.classList.remove('card-dark-mode');
+        })
+    }
+    
 })
+
+
+
+
 
 
 

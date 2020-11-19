@@ -89,6 +89,21 @@
     display: none; 
 }
 
+#back, 
+#forward {
+    font-size: 2.3em; 
+    cursor: pointer;
+}
+
+#back{
+    margin-right: 85px; 
+}
+
+#forward{
+    margin-left: 85px; 
+}
+
+
 /* ===================================== 
     Header +  search box
 ======================================== */

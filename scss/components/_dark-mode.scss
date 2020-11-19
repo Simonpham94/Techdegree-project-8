@@ -1,0 +1,28 @@
+.dark-mode{
+    background-color: #444;
+    color: #fff; 
+    svg{
+        fill: #fff; 
+    }
+    input{
+        background-color: #444; 
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    h1{
+        color: #fff; 
+    }
+
+}
+
+.card-dark-mode{
+    background-color: #878683; 
+    span {
+        color: #fff; 
+    }
+    button{
+        background-color: #878683;
+    }
+    
+}
