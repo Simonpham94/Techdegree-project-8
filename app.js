@@ -72,7 +72,7 @@ function displayModal(index) {
     const modalHTML = `
         <img class="avatar" src="${picture.large}" />
         <div class="text-container">
-            <h2 class="name">
+            <h2 class="modal-header">
                 <svg version="1.1" id="back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve"><path d="M239.077,245.333L466.213,18.219c4.171-4.16,4.179-10.914,0.019-15.085
                     c-2.006-2.011-4.731-3.139-7.571-3.134h-192c-2.831-0.005-5.548,1.115-7.552,3.115L24.443,237.781
@@ -91,7 +91,7 @@ function displayModal(index) {
             <p class="address">${city}</p>
             <hr />
             <p>${phone}</p>
-            <p class="address">${street}, ${state} ${postcode}</p>
+            <p class="address">${street.number, street.name}, ${state} ${postcode}</p>
             <p>Birthday:
             ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
@@ -103,6 +103,12 @@ function displayModal(index) {
     // Moving among between employee detail windows
     const back = document.getElementById('back'); 
     const forward = document.getElementById('forward'); 
+    
+    if(index == 0) {
+        back.style.visibility = 'hidden';
+    } else if (index == 11) {
+        forward.style.visibility = 'hidden';
+    }
 
     back.addEventListener('click', (e) =>{
         overlay.classList.add('hidden');

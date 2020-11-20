@@ -138,6 +138,12 @@ h1 {
   background-color: #fff;
 }
 
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .hidden {
   display: none;
 }
